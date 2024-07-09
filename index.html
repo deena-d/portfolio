@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+    <style>
+      .certificate-carousel {
+      max-width: 800px;
+      margin: auto;
+      position: relative;
+    }
+
+    .project-img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .details-container {
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .experience-details-container {
+        flex-direction: column;
+      }
+    }
+
+    .arrow {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      z-index: 10;
+    }
+    .prev {
+      left: 10px;
+    }
+    .next {
+      right: 10px;
+    }
+    </style>
+
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Portfolio</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Portfolio</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/Deena.png" alt="Deena D profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p11">Hello, I'm</p>
+        <h1 class="title1">Deena D</h1>
+        <p class="section__text__p2">And I'm Interested In <span class="typing"></span></p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/DEENA_RESUME.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/deena-d/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/deena-d'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p11">Get To Know More</p>
+      <h1 class="title1">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/deena2.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <!-- <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              /> -->
+              <div class="experience-container">
+                <div class="experience-container">
+                  <h3>About Us</h3>
+                  <div class="experience-details">
+                    <p class="experience-item">Representative, SA Engineering College</p>
+                    <p class="experience-item">Pre-Final Year Student</p>
+                    <p class="experience-item">CGPA: 8.3+</p>
+                    <p class="experience-item">Interest: Machine Learning, Frontend Development, Data Visualization</p>
+                    <p class="experience-item">Attended workshops, seminars, and hackathons</p>
+                    <p class="experience-item">Skills:</p>
+                    <ul class="skills-list1">
+                      <li>Python (for Machine Learning)</li>
+                      <li>HTML, CSS, JavaScript (for Frontend Development)</li>
+                      <li>Power BI, Tableau, Excel, SQL (for Data Visualization)</li>
+                    </ul>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+             
+          <img
+            src="./assets/arrow.png"
+            alt="Arrow icon"
+            class="icon arrow"
+            onclick="location.href='./#skills'"
+          />
+        </div>
+      </div>
+    </section>
+    <div class="details-container1">
+            <p class="experience-item">Myself Deena D studying in SA Engineering College, a pre-final year student, and I am the representative of my class. I have maintained a CGPA of 8.3+ overall for 5 semesters. I am interested in Machine Learning, Frontend Development, and Data Visualization tools. I like to explore new technologies, for which I have attended many workshops, seminars, and meets. I have also participated in hackathons. For Machine Learning, I have learned Python; for frontend development, I have learned HTML, CSS, and JavaScript; and for visualization, I have learned tools like Power BI, Tableau, Excel, and SQL. Additionally, I have worked as an HR Manager during a three-month internship.</p>
+              </div> 
+     <section id="skills">
+                <p class="section__text__p11">Explore My</p>
+                <h1 class="title1">Skills</h1>
+                <div class="experience-details-container">
+                  <div class="about-containers">
+                    <div class="details-container">
+                      <h2 class="experience-sub-title">Frontend Development</h2>
+                      <div class="article-container">
+                        <article>
+                          <img
+                            src="./assets/checkmark.png"
+                            alt="Experience icon"
+                            class="icon"
+                          />
+                          <div>
+                            <h3>HTML</h3>
+                            <p>Experienced</p>
+                          </div>
+                        </article>
+                        <article>
+                          <img
+                            src="./assets/checkmark.png"
+                            alt="Experience icon"
+                            class="icon"
+                          />
+                          <div>
+                            <h3>CSS</h3>
+                            <p>Experienced</p>
+                          </div>
+                        </article>
+                        <article>
+                          <img
+                            src="./assets/checkmark.png"
+                            alt="Experience icon"
+                            class="icon"
+                          />
+                          <div>
+                            <h3>JavaScript</h3>
+                            <p>Basic</p>
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                    <div class="details-container">
+                      <h2 class="experience-sub-title">Programming Languages</h2>
+                      <div class="article-container">
+                        <article>
+                          <img
+                            src="./assets/checkmark.png"
+                            alt="Experience icon"
+                            class="icon"
+                          />
+                          <div>
+                            <h3>C</h3>
+                            <p>Intermediate</p>
+                          </div>
+                        </article>
+                        <article>
+                          <img
+                            src="./assets/checkmark.png"
+                            alt="Experience icon"
+                            class="icon"
+                          />
+                          <div>
+                            <h3>C++</h3>
+                            <p>Intermediate</p>
+                          </div>
+                        </article>
+                        <article>
+                          <img
+                            src="./assets/checkmark.png"
+                            alt="Experience icon"
+                            class="icon"
+                          />
+                          <div>
+                            <h3>Python</h3>
+                            <p>Intermediate</p>
+                          </div>
+                        </article>
+                        <article>
+                          <img
+                            src="./assets/checkmark.png"
+                            alt="Experience icon"
+                            class="icon"
+                          />
+                          <div>
+                            <h3>Java</h3>
+                            <p>Basic</p>
+                          </div>
+                        </article>
+                      </div>
+                    </div>
+                    
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="skills-sections">
+                  <div class="skills-list left">
+                    <h2 class="experience-sub-title">Tools & Additional Skills</h2>
+                    <ul>
+                      <li>Canva</li>
+                      <li>Figma</li>
+                      <li>Power BI</li>
+                      <li>Tableau</li>
+                    </ul>
+                  </div>
+                  <div class="skills-list right">
+                    <h2 class="experience-sub-title">Creative Skills & Experiences</h2>
+                    <ul>
+                      <li>Communication</li>
+                      <li>Customer Service</li>
+                      <li>Problem-solving</li>
+                      <li>Time Management</li>
+                      <li>Leadership</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <img
+  src="./assets/arrow.png"
+  alt="Arrow icon"
+  class="icon arrow"
+  onclick="location.href='./#projects'"
+/>
+        </section>
+              <div class="section-space"></div>
+    <section id="projects">
+      <p class="section__text__p11">Browse My Recent</p>
+      <h1 class="title1">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/MultiD.png" alt="Project 1" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">MultiDisease Prediction</h2>
+            <p class="project-description">
+              This Python web application for predicting various diseases including diabetes, breast cancer, heart disease, and Parkinson's disease is built using the Streamlit framework and employs trained machine learning models for predictions.
+            </p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/deena-d/MultiDisease_Predict'">
+                Github
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/Credit.png" alt="Project 2" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Credit Card Fraud</h2>
+            <p class="project-description">
+              This model is used to predict credit card fraud based on transaction history. The project was developed using Google Colab and employs logistic regression principles to determine whether a credit card transaction is fraudulent.
+            </p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/deena-d/Credit-Card-Fraud'">
+                Github
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Visualization.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Data Visualization </h2>
+            <p class="project-description">
+              This project showcases a Walmart dashboard created using data from 2011 to 2014. The dashboard was developed using two popular data visualization tools: Power BI Desktop and Tableau. The purpose of this project is to provide users with an interactive and informative visualization of the provided Walmart data, allowing them to explore various metrics and trends.
+            </p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/deena-d/Walmart'"
+              >
+                Github
+              </button>
+              <!-- <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#certificates'"
+      />
+    </section>
+    <section id="certificates">
+      <p class="section__text__p11">Explore My</p>
+      <h1 class="title1">Certificates</h1>
+      <div class="certificate-carousel">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img
+              src="./assets/Google.png"
+              alt="Google IT Support"
+              class="project-img"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">Google IT Support</h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://www.coursera.org/account/accomplishments/professional-cert/NX35WUP43MXF?utm_source=mobile&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=prof'"
+            >
+            View Certificate
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img
+              src="./assets/Microsoft.png"
+              alt="Microsoft Power Platform Fundamentals"
+              class="project-img"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">Microsoft Power Platform Fundamentals</h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://learn.microsoft.com/en-us/training/achievements/learn-dynamics.power-plat-fundamentals.trophy?username=DEENAD-4060&sharingId=A9E923225F3652F9'"
+            >
+            View Certificate
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img
+              src="./assets/Oracle.png"
+              alt="Oracle Cloud Infrastructure"
+              class="project-img"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">Oracle Cloud Infrastructure</h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://catalog-education.oracle.com/pls/certview/sharebadge?id=9EA67EFCD0EA2FB4B5C2A88ABC7BA39895A05EA191E2F88E935E7007C2451BFD'"
+            >
+            View Certificate
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img
+              src="./assets/aws.png"
+              alt="AWS Educate Getting Started with Security"
+              class="project-img"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">AWS Educate Getting Started with Security</h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://www.credly.com/badges/418bd85e-726f-4513-a3e8-e0cc2eaeadbc/public_url'"
+            >
+            View Certificate
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img
+              src="./assets/postman.png"
+              alt="Postman API Fundamentals Student Expert"
+              class="project-img"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">Postman API Fundamentals Student Expert</h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://badgr.com/public/assertions/tLBa4JH3SbOCU03CuLGNkQ?identity__email=ddeena832004@gmail.com'"
+            >
+            View Certificate
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img
+              src="./assets/goog.png"
+              alt="Crash Course on Python"
+              class="project-img"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">Crash Course on Python</h2>
+          <div class="btn-container">
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://www.coursera.org/account/accomplishments/verify/EESULPRKCELT?utm_source=mobile&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course'"
+            >
+            View Certificate
+            </button>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'">
+    </section>
+    
+    <section id="contact">
+      <p class="section__text__p11">Get in Touch</p>
+      <h1 class="title1  `">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:ddeena832004@gmail.com">Email Me</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/deena-d/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Deena D. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+    $('.certificate-carousel').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true, 
+      autoplaySpeed: 2000,
+      arrows: true,
+      dots: true,
+      prevArrow: '<div class="arrow prev"><i class="fas fa-chevron-left"></i></div>',
+      nextArrow: '<div class="arrow next"><i class="fas fa-chevron-right"></i></div>',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            dots: true
+          }
+        }
+      ]
+    });
+  });
+  </script>
+  <!-- Your custom JavaScript -->
+  </body>
+</html>

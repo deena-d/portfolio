@@ -1,0 +1,155 @@
+@media screen and (max-width: 1400px) {
+  #profile {
+    height: 83vh;
+    margin-bottom: 6rem;
+  }
+  .about-containers {
+    flex-wrap: wrap;
+  }
+  #contact,
+  #projects {
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  #experience,
+  .experience-details-container {
+    margin-top: 2rem;
+  }
+  #profile,
+  .section-container {
+    display: block;
+  }
+  .arrow {
+    display: none;
+  }
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
+  
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+  .about-containers {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #contact,
+  footer {
+    height: 40vh;
+  }
+  #profile {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+
+  article {
+    font-size: 1rem;
+  }
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+  .about-containers,
+  .contact-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+  .contact-info-container {
+    margin: 0;
+  }
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .experience-sub-title {
+    font-size: 1.25rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .text-container {
+    text-align: justify;
+  }
+}
+.certificate-details-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: center; /* Center items horizontally */
+}
+
+.certificate-item {
+  width: calc(50% - 20px); /* Set width for each certificate item, considering margins */
+  margin: 10px; /* Add margin around each certificate item */
+  padding: 10px; /* Add padding for better appearance */
+  border: 1px solid #ccc; /* Add border to separate items */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  box-sizing: border-box; /* Include border and padding in the total width/height */
+  text-align: center; /* Center align text */
+}
+
+@media screen and (max-width: 768px) {
+  .certificate-item {
+    width: calc(100% - 20px); /* Set full width for each certificate item on smaller screens */
+  }
+}
+
+/* Add styles for mobile devices */
+@media only screen and (max-width: 768px) {
+  /* Adjust the layout of skill list and project */
+  .skills-sections {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skills-list {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .right {
+    margin-left: 0;
+  }
+
+  /* Optionally, you can adjust other styles as needed */
+}
+@media screen and (max-width: 1200px) {
+  /* Other existing styles */
+
+  #projects,
+  #certificates {
+    margin-top: 6rem; /* Adjust the top margin to create space between sections */
+  }
+}
+
